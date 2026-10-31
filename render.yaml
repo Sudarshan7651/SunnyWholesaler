@@ -3,7 +3,6 @@ services:
     name: sunnywholesaler-backend
     runtime: node
     rootDir: backend
-    plan: free
     buildCommand: npm install
     startCommand: node index.js
     healthCheckPath: /
@@ -17,7 +16,6 @@ services:
     name: sunnywholesaler-frontend
     runtime: static
     rootDir: frontend
-    plan: free
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     routes:
