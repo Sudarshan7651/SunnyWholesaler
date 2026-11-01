@@ -43,13 +43,9 @@ function HeroImageSlider() {
         if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false);
       }}
     >
-      <div
-        className="hero-slider-track"
-        aria-live="polite"
-        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-      >
-        {slides.map((slide) => (
-          <div className="hero-slider-slide" key={slide.src}>
+      <div className="hero-slider-track" aria-live="polite">
+        {slides.map((slide, index) => (
+          <div className={`hero-slider-slide ${index === activeIndex ? 'active' : ''}`} key={slide.src}>
             <img
               className="hero-visual-image"
               src={slide.src}

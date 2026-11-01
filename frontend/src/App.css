@@ -991,17 +991,23 @@
 }
 
 .hero-slider-track {
-  display: flex;
+  position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 650ms ease-in-out;
 }
 
 .hero-slider-slide {
-  position: relative;
-  flex: 0 0 100%;
-  min-width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 700ms ease, visibility 0s linear 700ms;
+}
+
+.hero-slider-slide.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 700ms ease, visibility 0s linear 0s;
 }
 
 .hero-visual-image {
@@ -1013,13 +1019,13 @@
   border-radius: inherit;
   object-fit: cover;
   object-position: center;
-  animation: hero-slide-enter 650ms ease both;
+  animation: hero-slide-enter 700ms ease both;
 }
 
 @keyframes hero-slide-enter {
   from {
-    opacity: 0.35;
-    transform: scale(1.025);
+    opacity: 0.25;
+    transform: scale(1.04);
   }
   to {
     opacity: 1;
