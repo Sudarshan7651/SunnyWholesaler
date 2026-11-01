@@ -25,7 +25,7 @@ function HeroImageSlider() {
 
     const intervalId = window.setInterval(() => {
       setActiveIndex((currentIndex) => (currentIndex + 1) % slides.length);
-    }, 2000);
+    }, 3500);
 
     return () => window.clearInterval(intervalId);
   }, [paused]);

@@ -26,8 +26,8 @@ function ShowroomImageSlider() {
 
     const intervalId = window.setInterval(() => {
       setActiveIndex((currentIndex) => (currentIndex + 1) % slides.length);
-    }, 2000);
-
+    }, 2500);
+ 
     return () => window.clearInterval(intervalId);
   }, [paused]);
 
