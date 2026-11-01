@@ -1452,6 +1452,29 @@
   background: #211b14;
 }
 
+.showroom-slider-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 170px;
+  height: 42px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 4px;
+  background: #d7a35a;
+  color: #17120c;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18);
+  pointer-events: none;
+}
+
 .showroom-slider-track {
   display: flex;
   width: 100%;

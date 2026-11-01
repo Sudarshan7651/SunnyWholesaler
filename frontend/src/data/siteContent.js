@@ -12,6 +12,7 @@ export const businessInfo = {
     'Sunny Wholesaler features Young Fit premium men’s shirts and readymade garments for kids and junior boys. We supply retailers with high-quality, trend-setting apparel in bulk wholesale bundles.',
   phone: '+91 77700 06346',
   whatsapp: 'https://wa.me/917770006346',
+  instagram: 'https://www.instagram.com/sunny_wholesaler/',
   address: 'Shop No G13, Ananta Arcade, Gaon Road, near Rayba Hotel, Wasan Nagar, Pathardi Phata, Nashik, Maharashtra 422010',
   hours: 'Contact us for current business hours',
   shipping: 'Parcel delivery available across Maharashtra',

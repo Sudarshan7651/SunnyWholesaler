@@ -8,8 +8,10 @@ function Footer() {
           <h3>{businessInfo.name}</h3>
           <p>Premium men’s shirts and readymade garments for kids and junior boys, featuring Young Fit.</p>
           <a className="footer-whatsapp" href={businessInfo.whatsapp} target="_blank" rel="noreferrer">Chat with our team ↗</a>
-        </div>
-
+          <div className="footer-socials">
+          <a className="footer-whatsapp" href={businessInfo.instagram} target="_blank"> follow us on instagram ↗</a>
+          </div>
+        </div>   
         <div>
           <h4>Quick links</h4>
           <ul>

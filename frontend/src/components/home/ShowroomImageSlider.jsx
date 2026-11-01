@@ -48,6 +48,7 @@ function ShowroomImageSlider() {
   }
 
   return (
+    
     <div
       className="showroom-slider"
       role="region"
@@ -60,6 +61,12 @@ function ShowroomImageSlider() {
         if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false);
       }}
     >
+              
+
+      <span className="showroom-slider-badge" aria-label="New arrivals">
+        New Arrivals
+      </span>
+
       <div
         className="showroom-slider-track"
         aria-live="polite"
