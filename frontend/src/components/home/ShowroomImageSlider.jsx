@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-// 1. Automatically import all images from the youngFit folder using Vite's glob import
-const imageModules = import.meta.glob('../../assets/youngFit/*.{png,jpg,jpeg,svg,webp}', { eager: true });
+// 1. Automatically import all images from the latestArticals folder using Vite's glob import
+const imageModules = import.meta.glob('../../assets/latestArticals/*.{png,jpg,jpeg,svg,webp}', { eager: true });
 
 // 2. Map the imported modules into the slides array structure with automatic clean alt tags
 const slides = Object.entries(imageModules).map(([path, module]) => {

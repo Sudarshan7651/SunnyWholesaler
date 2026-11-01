@@ -1,8 +1,8 @@
-import shirtAssortment from '../assets/youngfit-shirt-assortment.jpg';
-import shirtColors from '../assets/youngfit-shirt-colors.jpg';
-import shirtColorsBright from '../assets/youngfit-shirt-colors-bright.jpg';
-import shirtDetail from '../assets/youngfit-shirt-detail.jpg';
-import shirtTexture from '../assets/youngfit-shirt-texture.jpg';
+import shirtAssortment from '../assets/latestArticals/image1.webp';
+import shirtColors from '../assets/latestArticals/image2.webp';
+import shirtColorsBright from '../assets/latestArticals/image3.webp';
+import shirtDetail from '../assets/latestArticals/image4.webp';
+import shirtTexture from '../assets/latestArticals/image5.webp';
 
 const shirtImages = [
   shirtColors,

@@ -4,7 +4,7 @@ import HeroImageSlider from '../components/home/HeroImageSlider';
 import ShowroomImageSlider from '../components/home/ShowroomImageSlider';
 import EnquiryForm from '../components/forms/EnquiryForm';
 import { businessInfo, faqs } from '../data/siteContent';
-import shirtAssortment from '../assets/youngfit-shirt-assortment.jpg';
+import heroBackdrop from '../assets/latestArticals/image1.webp';
 
 const reasons = [
   {
@@ -35,7 +35,7 @@ function HomePage() {
     <>
       <section className="hero-section" id="home">
         <div className="hero-backdrop" aria-hidden="true">
-          <img src={shirtAssortment} alt="" />
+          <img src={heroBackdrop} alt="" loading="lazy" decoding="async" />
         </div>
         <div className="container hero-content">
           <div className="hero-copy">

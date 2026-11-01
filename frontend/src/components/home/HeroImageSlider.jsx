@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
-import storefrontView from '../../assets/sliderImages/image copy 2.png';
-import ownerPortrait from '../../assets/sliderImages/image copy 3.png';
-import teamPhoto from '../../assets/sliderImages/image copy 4.png';
-import shirtShowcase from '../../assets/sliderImages/image copy 5.png';
-import storefrontSign from '../../assets/sliderImages/image.png';
-import shopEntrance from '../../assets/sliderImages/image copy.png';
+import storefrontView from '../../assets/sliderImages/image1.webp';
+import ownerPortrait from '../../assets/sliderImages/image2.webp';
+import teamPhoto from '../../assets/sliderImages/image3.webp';
+import storefrontSign from '../../assets/sliderImages/image6.webp';
+import shopEntrance from '../../assets/sliderImages/image5.webp';
 
 const slides = [
   { src: storefrontView, alt: 'Sunny Wholesaler storefront inside Ananta Arcade' },
@@ -54,6 +53,8 @@ function HeroImageSlider() {
         className="hero-visual-image"
         src={activeSlide.src}
         alt={activeSlide.alt}
+        loading="lazy"
+        decoding="async"
       />
       <div className="hero-visual-caption">
         <span>Sunny Wholesaler</span>

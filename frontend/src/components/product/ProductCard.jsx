@@ -6,7 +6,13 @@ function ProductCard({ product }) {
   return (
     <article className="product-card">
       <div className="product-image-wrap">
-        <img src={product.image} alt={product.name} className="product-image" />
+        <img
+          src={product.image}
+          alt={product.name}
+          className="product-image"
+          loading="lazy"
+          decoding="async"
+        />
         <span className="product-number" aria-hidden="true">
           {String(product.id).padStart(2, '0')}
         </span>

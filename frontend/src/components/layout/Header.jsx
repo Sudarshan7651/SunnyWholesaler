@@ -20,9 +20,11 @@ function Header() {
         <div className="container header-inner">
           <a href="#home" className="brand" onClick={() => setMenuOpen(false)}>
             <img
-              src="/sunny-wholesaler-logo.png"
+              src="/sunny-wholesaler-logo.webp"
               alt={`${businessInfo.name} logo`}
               className="brand-logo"
+              loading="eager"
+              decoding="async"
             />
             <div>
               <strong>{businessInfo.name}</strong>
