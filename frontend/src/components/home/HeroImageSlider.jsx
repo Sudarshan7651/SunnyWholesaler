@@ -13,27 +13,22 @@ const slides = [
   { src: shopEntrance, alt: 'Entrance to Sunny Wholesaler shop G13' },
 ];
 
-function randomIndex(excludeIndex = -1) {
-  const choices = slides.map((_, index) => index).filter((index) => index !== excludeIndex);
-  return choices[Math.floor(Math.random() * choices.length)];
-}
-
 function HeroImageSlider() {
-  const [activeIndex, setActiveIndex] = useState(() => randomIndex());
+  const [activeIndex, setActiveIndex] = useState(0);
   const [paused, setPaused] = useState(false);
 
   useEffect(() => {
-    const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (paused || motionPreference.matches) return undefined;
+    if (slides.length <= 1) return undefined;
+
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (paused || mediaQuery.matches) return undefined;
 
     const intervalId = window.setInterval(() => {
-      setActiveIndex((currentIndex) => randomIndex(currentIndex));
-    }, 4500);
+      setActiveIndex((currentIndex) => (currentIndex + 1) % slides.length);
+    }, 2000);
 
     return () => window.clearInterval(intervalId);
   }, [paused]);
-
-  const activeSlide = slides[activeIndex];
 
   return (
     <div
@@ -48,17 +43,27 @@ function HeroImageSlider() {
         if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false);
       }}
     >
-      <img
-        key={activeSlide.src}
-        className="hero-visual-image"
-        src={activeSlide.src}
-        alt={activeSlide.alt}
-        loading="lazy"
-        decoding="async"
-      />
+      <div
+        className="hero-slider-track"
+        aria-live="polite"
+        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+      >
+        {slides.map((slide) => (
+          <div className="hero-slider-slide" key={slide.src}>
+            <img
+              className="hero-visual-image"
+              src={slide.src}
+              alt={slide.alt}
+              decoding="async"
+            />
+          </div>
+        ))}
+      </div>
+
       <div className="hero-visual-caption">
         <span>Sunny Wholesaler</span>
         <strong>For growing retail businesses</strong>
+
         <div className="hero-slider-dots" aria-label="Choose a product photo">
           {slides.map((slide, index) => (
             <button

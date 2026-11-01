@@ -10,7 +10,6 @@ function ProductCard({ product }) {
           src={product.image}
           alt={product.name}
           className="product-image"
-          loading="lazy"
           decoding="async"
         />
         <span className="product-number" aria-hidden="true">

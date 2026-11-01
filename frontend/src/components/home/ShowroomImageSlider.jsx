@@ -19,15 +19,14 @@ function ShowroomImageSlider() {
   const [paused, setPaused] = useState(false);
 
   useEffect(() => {
-    // Avoid running an interval if no images were matched
-    if (!slides || slides.length === 0) return undefined;
+    if (!slides || slides.length <= 1) return undefined;
 
     const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (paused || motionPreference.matches) return undefined;
 
     const intervalId = window.setInterval(() => {
       setActiveIndex((currentIndex) => (currentIndex + 1) % slides.length);
-    }, 4500);
+    }, 2000);
 
     return () => window.clearInterval(intervalId);
   }, [paused]);
@@ -40,7 +39,6 @@ function ShowroomImageSlider() {
     setActiveIndex((currentIndex) => (currentIndex + 1) % slides.length);
   };
 
-  // Graceful fallback UI in case Vite didn't find any images in the folder
   if (!slides || slides.length === 0) {
     return (
       <div className="showroom-slider-empty" style={{ padding: '20px', textTransform: 'none', textAlign: 'center' }}>
@@ -48,8 +46,6 @@ function ShowroomImageSlider() {
       </div>
     );
   }
-
-  const activeSlide = slides[activeIndex];
 
   return (
     <div
@@ -64,13 +60,17 @@ function ShowroomImageSlider() {
         if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false);
       }}
     >
-      <img
-        key={activeSlide.src}
-        className="showroom-image"
-        src={activeSlide.src}
-        alt={activeSlide.alt}
-        loading="lazy"
-      />
+      <div
+        className="showroom-slider-track"
+        aria-live="polite"
+        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+      >
+        {slides.map((slide) => (
+          <div className="showroom-slider-slide" key={slide.src}>
+            <img className="showroom-image" src={slide.src} alt={slide.alt} />
+          </div>
+        ))}
+      </div>
 
       <button
         className="showroom-slider-arrow showroom-slider-previous"

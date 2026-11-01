@@ -35,7 +35,7 @@ function HomePage() {
     <>
       <section className="hero-section" id="home">
         <div className="hero-backdrop" aria-hidden="true">
-          <img src={heroBackdrop} alt="" loading="lazy" decoding="async" />
+          <img src={heroBackdrop} alt="" decoding="async" />
         </div>
         <div className="container hero-content">
           <div className="hero-copy">
@@ -142,7 +142,6 @@ function HomePage() {
               <iframe
                 src={businessInfo.mapEmbedUrl}
                 title={`Map showing Sunny Wholesaler at ${businessInfo.address}`}
-                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
