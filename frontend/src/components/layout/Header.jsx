@@ -11,9 +11,9 @@ function Header() {
         <div className="container announcement-inner">
           <span>Factory-direct wholesale apparel</span>
           <span className="announcement-separator">•</span>
-          <span>Custom labeling enquiries welcome</span>
-          <span className="announcement-separator">•</span>
           <span>Parcel delivery across Maharashtra</span>
+          <span className="announcement-separator">•</span>
+          <span>Custom labeling enquiries welcome</span>
         </div>
       </div>
       <header className="site-header">
@@ -67,5 +67,4 @@ function Header() {
     </>
   );
 }
-
 export default Header;

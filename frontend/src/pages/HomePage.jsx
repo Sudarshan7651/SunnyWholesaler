@@ -42,7 +42,7 @@ function HomePage() {
             <span className="eyebrow">Self Manufacturing & Wholesaler · Nashik</span>
             <h1>Premium wholesale apparel for growing <span>retailers.</span></h1>
             <p>
-              Discover premium Young Fit men’s shirts and readymade garments for kids and junior
+              Discover premium Young Fit men’s shirts, t-shirts, jeans and readymade garments for
               boys. Explore quality fabrics, trend-setting designs, and wholesale bundles built
               for regional apparel retailers.
             </p>
