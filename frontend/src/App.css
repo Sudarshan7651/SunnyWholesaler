@@ -571,6 +571,71 @@
   text-decoration: underline;
 }
 
+.success-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.success-modal {
+  position: relative;
+  width: min(100%, 420px);
+  border: 1px solid rgba(255, 116, 0, 0.3);
+  border-radius: 22px;
+  padding: 28px 24px 22px;
+  background: linear-gradient(180deg, #171717, #101010);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.45);
+  text-align: center;
+}
+
+.success-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.02);
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.success-modal-icon {
+  display: grid;
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: rgba(255, 116, 0, 0.12);
+  color: #ff8a1f;
+  font-size: 2rem;
+  place-items: center;
+  font-weight: 800;
+}
+
+.success-modal h3 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: clamp(1.8rem, 5vw, 2.2rem);
+}
+
+.success-modal p {
+  margin: 0 0 22px;
+  color: #c5c5c5;
+  line-height: 1.7;
+}
+
+.success-modal-button {
+  width: 100%;
+}
+
 .hero-location-footer {
   display: flex;
   justify-content: space-between;
