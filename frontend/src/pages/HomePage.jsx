@@ -1,5 +1,4 @@
 import SectionTitle from '../components/common/SectionTitle';
-import WhatsAppIcon from '../components/common/WhatsAppIcon';
 import HeroImageSlider from '../components/home/HeroImageSlider';
 import ShowroomImageSlider from '../components/home/ShowroomImageSlider';
 import EnquiryForm from '../components/forms/EnquiryForm';
@@ -48,7 +47,7 @@ function HomePage() {
             </p>
             <div className="hero-actions">
               <a className="button button-whatsapp" href={businessInfo.whatsapp} target="_blank" rel="noreferrer">
-                <WhatsAppIcon /> Chat on WhatsApp
+                Enquiry Now
               </a>
               <a className="button button-secondary" href="#enquiry">Request a callback</a>
             </div>
@@ -82,8 +81,8 @@ function HomePage() {
               title="Wholesale apparel for your retail inventory"
               subtitle="Sunny Wholesaler, featuring Young Fit, supplies premium men’s shirts and readymade clothing for kids and junior boys."
             />
-            <a className="button button-secondary" href={businessInfo.whatsapp} target="_blank" rel="noreferrer">
-              Talk to our team
+            <a className="button button-secondary" href="#enquiry">
+              Request a callback
             </a>
           </div>
           <div className="reason-list">
@@ -104,8 +103,8 @@ function HomePage() {
           <span className="eyebrow">Your wholesale contact</span>
           <h2>Need the latest styles and pricing?</h2>
           <p>Message our Nashik team for the latest Young Fit articles, fabric details, color sets, size ratios, and wholesale ordering.</p>
-          <a className="button button-whatsapp" href={businessInfo.whatsapp} target="_blank" rel="noreferrer">
-            <WhatsAppIcon /> Start a WhatsApp chat
+          <a className="button button-secondary" href="#enquiry">
+            Request a callback
           </a>
           <a className="showroom-directions" href={businessInfo.mapUrl} target="_blank" rel="noreferrer">
             Visit us at Ananta Arcade, Nashik <span aria-hidden="true">↗</span>

@@ -853,7 +853,7 @@
 }
 
 .button-whatsapp:hover {
-  background: #35ca7c;
+  background: #20b66a;
   box-shadow: 0 12px 30px rgba(32, 182, 106, 0.25);
 }
 
@@ -1866,9 +1866,12 @@ select.form-control {
 }
 
 .footer-whatsapp {
-  color: #4bc77f;
+  color: #d7a35a;
   font-size: 0.79rem;
   font-weight: 750;
+  text-decoration: underline;
+  text-decoration-thickness: 1.6px;
+  text-underline-offset: 3px;
 }
 
 .footer-bottom {
